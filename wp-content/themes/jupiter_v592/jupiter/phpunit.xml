@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+	bootstrap="./tests/bootstrap.php"
+	colors="true"
+	convertErrorsToExceptions="true"
+	convertNoticesToExceptions="true"
+	convertWarningsToExceptions="true"
+	processIsolation="false"
+	stopOnFailure="false"
+	syntaxCheck="true"
+	backupGlobals="false"
+	>
+    <php>
+        <ini name="display_errors" value="true" />
+    </php>
+    <testsuites>
+        <testsuite name="all-tests">
+            <directory suffix="-test.php">./tests/</directory>
+        </testsuite>
+		<testsuite name="unit-tests">
+		    <directory suffix="-test.php">./tests/unit</directory>
+		</testsuite>
+		<testsuite name="integration-tests">
+		    <directory suffix="-test.php">./tests/integration</directory>
+		</testsuite>
+		<testsuite name="acceptance-tests">
+		    <directory suffix="-test.php">./tests/acceptance</directory>
+		</testsuite>
+    </testsuites>
+</phpunit>
